@@ -1,0 +1,115 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+}
+main {
+	position: relative;
+	background-color: hsl(185, 75%, 39%);
+	overflow: hidden;
+	height: 100vh;
+}
+main > img:first-of-type {
+	position: absolute;
+	top: -50%;
+	left: -25%;
+}
+main > img:last-of-type {
+	position: absolute;
+	bottom: -50%;
+	right: -25%;
+	display: hidden;
+}
+@media (width: 375px) {
+	main > img:first-of-type {
+	position: absolute;
+	top: -80%;
+	left: -175%;
+	}
+	main > img:last-of-type {
+		position: absolute;
+    bottom: -80%;
+    right: -175%;
+	}
+}
+.card {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	border-radius: 6px;
+	overflow: hidden;
+}
+.card .person > img {
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: 25%;
+	border: 5px solid white;
+	transform: translateX(-50%);
+}
+.card .person .txt {
+	margin-top: 80px;
+	text-align: center;
+}
+.card .person .txt p:first-child {
+	color: hsl(229, 23%, 23%);
+	font-weight: bold;
+	font-size: 18px;
+}
+.card .person .txt p:first-child span {
+	color: hsl(0, 0%, 59%);
+	font-weight: normal;
+	margin-left: 10px;
+}
+.card .person .txt p:last-child {
+	color: hsl(0, 0%, 59%);
+	margin: 20px 0;
+}
+@media (width: 375px) {
+	.card .person .txt {
+    margin-top: 60px;
+	}
+	.card .person .txt p:last-child {
+		margin: 10px 0 30px;
+	}
+}
+.card .stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+	gap: 20px;
+	border-top: 1px solid #ccc;
+	padding: 20px;
+}
+.card .stats .stat {
+	text-align: center;
+}
+.card .stats .stat p:first-child {
+	color: hsl(229, 23%, 23%);
+	font-weight: bold;
+	font-size: 18px;
+}
+.card .stats .stat p:last-child {
+	color: hsl(0, 0%, 59%);
+	font-size: 12px;
+	margin-top: 5px;
+}
+main .attribution {
+	width: 260px;
+	position: absolute;
+	font-size: 11px;
+	text-align: center;
+	color: hsl(228, 45%, 44%);
+	left: 50%;
+	top: 75%;
+	transform: translateX(-50%);
+}
+main .attribution a {
+	color: hsl(185, 97%, 15%);
+	text-decoration: none;
+	font-weight: bold;
+}
